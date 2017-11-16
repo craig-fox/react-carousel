@@ -6,6 +6,7 @@
 .idea/**/workspace.xml
 .idea/react-carousel.iml
 .idea/**/modules.xml
+.idea/
 .idea/**/tasks.xml
 .idea/dictionaries
 

@@ -1,36 +1,23 @@
 import React, { Component } from 'react';
-import {Carousel, CarouselItem} from 'react-bootstrap';
-import Item from './Item'
 import './Display.css';
+import CarouselHandler from "../carousel/CarouselHandler";
 
 class Display extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            items: []
-        }
-    }
-
-    componentDidMount(){
-        fetch(this.props['data-url'])
-              .then((response)=>response.json())
-              .then((items)=>this.setState({items: items}))
-    }
-
     render(){
+        const dataUrl = "/data/item-data.json"
         return (
             <div className="display">
-
-                <Carousel defaultActiveIndex={0}>
-                    {this.state.items.map(i => {
-                        return <CarouselItem key={i.id}>
-                            <Item {...i}/>
-                        </CarouselItem>
-                      })
-                    }
-
-                </Carousel>
+                <header className="App-header">
+                    <h1 className="App-title">Carousel App</h1>
+                </header>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-md-12 col-xs-12">
+                            <CarouselHandler data-url={dataUrl} />
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
