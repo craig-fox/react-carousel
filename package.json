@@ -1,20 +1,25 @@
 {
-  "name": "react-carousel",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-server",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craig-fox/react-carousel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "react": "^16.1.0",
-    "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.1.0"
+    "express": "^4.16.2",
+    "nedb": "^1.8.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.17"
+    "concurrently": "^3.5.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+  "homepage": "https://github.com/craig-fox/react-carousel#readme"
 }
